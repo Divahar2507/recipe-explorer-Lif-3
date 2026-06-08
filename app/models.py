@@ -15,7 +15,7 @@ class DifficultyLevel(str, Enum):
 
 class Recipe(BaseModel):
     model_config = ConfigDict(
-        json_encoders={
+        ser_json_encoders={
             datetime: lambda v: v.isoformat()
         }
     )
